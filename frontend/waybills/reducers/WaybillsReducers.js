@@ -3,8 +3,8 @@ import {GET_WAYBILLS_REQUEST,
         GET_WAYBILLS_FAILED} from '../constants/WaybillsConstants.js';
 
 const carsInitialState = {
+  individuals: [],
   cars: [],
-  carTypes: [],
   waybills: [],
   fetching: false,
   error: ''

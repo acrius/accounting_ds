@@ -45,7 +45,7 @@ def get_value_for_field(field, value):
     elif field.type.python_type == float:
         result_value = float(value)
     elif field.type.python_type == datetime:
-        result_value = datetime(value)
+        result_value = datetime(value).isoformat()
 
     return result_value
 

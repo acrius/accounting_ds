@@ -7,8 +7,9 @@ import injectTapEventPlugin from 'react-tap-event-plugin';
 
 import Application from './global/components/Application.js';
 
-import IndividualsList from './main/containers/Individuals.js'
-import CarsList from './waybills/containers/Cars.js'
+import IndividualsList from './main/containers/Individuals.js';
+import CarsList from './waybills/containers/Cars.js';
+import WaybillsWorkspace from './waybills/components/WaybillsWorkspace.js'
 
 import configureStore from './global/store/configureStore.js';
 
@@ -22,6 +23,7 @@ render(
       <Route path='/' component={Application}>
         <Route path='/directories/individuals' component={IndividualsList} />
         <Route path='/directories/cars' component={CarsList} />
+        <Route path='/active-directories/waybills' component={WaybillsWorkspace} />
       </Route>
     </Router>
   </Provider>,

@@ -12,18 +12,22 @@ export function getIndividuals() {
     });
 
     try {
-      load(INDIVIDUALS_QUERY_STRING)
-        .then( data => dispatch({
+      getIndividualsData()
+        .then( individuals => dispatch({
             type: GET_INDIVIDUALS_SUCCESS,
-            payload: data
+            payload: individuals
           }
         ));
     } catch(e) {
-      dispatch(
-        {type: GET_INDIVIDUALS_FAILED,
-        error: true,
-        payload: new Error(e)
-      });
+      dispatch({
+          type: GET_INDIVIDUALS_FAILED,
+          error: true,
+          payload: new Error(e)
+        });
     }
   };
+}
+
+export function getIndividualsData() {
+  return load(INDIVIDUALS_QUERY_STRING);
 }

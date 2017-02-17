@@ -19,7 +19,7 @@ class Navigation extends Component {
         <Link to='/directories/cars'><MenuItem>Машины</MenuItem></Link>
         <Divider />
         <Subheader inset={true}>Документы</Subheader>
-        <MenuItem>Путевые листы</MenuItem>
+        <Link to='/active-directories/waybills'><MenuItem>Путевые листы</MenuItem></Link>
       </Drawer>
     );
   }

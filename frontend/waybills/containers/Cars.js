@@ -10,7 +10,6 @@ import * as carsActions from '../actions/CarsActions.js'
 
 class CarsListItem extends Component {
   render() {
-    console.log(this.props.car);
     return (
       <TableRow key={this.props.index} selectable={true}>
         <TableRowColumn>{this.props.car.id}</TableRowColumn>
@@ -62,7 +61,6 @@ class CarsList extends Component {
 function mapStateToProps(state) {
   return {
     cars: state.cars.cars,
-    carTypes: state.cars.carTypes,
     fetching: state.cars.fetching,
     error: state.cars.error
   };
